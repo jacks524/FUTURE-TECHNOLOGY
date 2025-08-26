@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Commande Impression",
+  "enabled": 1,
+  "modified": "2025-08-23 15:13:52.549466",
+  "module": "",
+  "name": "script",
+  "script": "frappe.ui.form.on('Commande Impression', {\n    refresh: function(frm) {\n        frm.set_value('total', (frm.doc.prix_unitaire || 0) * (frm.doc.quantite || 0));\n    },\n    prix_unitaire: function(frm) {\n        frm.set_value('total', (frm.doc.prix_unitaire || 0) * (frm.doc.quantite || 0));\n    },\n    quantite: function(frm) {\n        frm.set_value('total', (frm.doc.prix_unitaire || 0) * (frm.doc.quantite || 0));\n    },\n    workflow_state: function(frm) {\n        if (frm.doc.workflow_state === 'Approved') {\n            frappe.msgprint(`Enregistrement journalier : Prix Unitaire - ${frm.doc.prix_unitaire} FCFA, Quantité - ${frm.doc.quantite}, Total - ${frm.doc.total} FCFA`);\n        }\n    }\n});",
+  "view": "Form"
+ }
+]

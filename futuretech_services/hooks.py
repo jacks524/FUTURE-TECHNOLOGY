@@ -4,6 +4,18 @@ app_publisher = "none"
 app_description = "application pour la boutique future technologies"
 app_email = "junsts719@gmail.com"
 app_license = "unlicense"
+fixtures = [
+    "Client Script",
+    "Workspace",
+    "Property Setter",
+    {"dt": "Custom Field", "filters": [["dt", "in", [
+        "Commande Impression",
+        "Commande Photographie",
+        "Commande Papeterie",
+        "Commande Secretariat"
+    ]]]}
+]
+
 
 # Apps
 # ------------------

@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-08 20:19:09.816426",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ubjs",
+  "client",
+  "date",
+  "format",
+  "type_dimpression",
+  "couleur",
+  "grammage",
+  "quantite",
+  "prix_unitaire",
+  "total",
+  "factures_li\u00e9e",
+  "commentraires",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ubjs",
+   "fieldtype": "Section Break",
+   "label": "Impression"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "format",
+   "fieldtype": "Select",
+   "label": "Format",
+   "options": "A4\nA3\nA2"
+  },
+  {
+   "fieldname": "type_dimpression",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type D'impression",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "couleur",
+   "fieldtype": "Color",
+   "label": "Couleur"
+  },
+  {
+   "fieldname": "grammage",
+   "fieldtype": "Data",
+   "label": "Grammage"
+  },
+  {
+   "fieldname": "quantite",
+   "fieldtype": "Int",
+   "label": "Quantite"
+  },
+  {
+   "fieldname": "prix_unitaire",
+   "fieldtype": "Currency",
+   "label": "Prix unitaire"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "options": "eval:doc.prix_unitaire * doc.quantit\u00e9\n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "factures_li\u00e9e",
+   "fieldtype": "Link",
+   "label": "Factures li\u00e9e",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "commentraires",
+   "fieldtype": "Small Text",
+   "label": "Commentraires"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Commande Impression",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-26 16:02:04.441890",
+ "modified_by": "Administrator",
+ "module": "Futuretech Services",
+ "name": "Commande Impression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
