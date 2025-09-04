@@ -1,0 +1,77 @@
+{
+ "charts": [
+  {
+   "chart_name": "IMPRESSION-T",
+   "label": "impression "
+  }
+ ],
+ "content": "[{\"id\":\"sYt_Zgd2Xi\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FUTURE TECHNOLOGY</span>\",\"col\":12}},{\"id\":\"W1pJ85ZyWm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"IMPRESSION\",\"col\":3}},{\"id\":\"zz5SDVUFp0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rapport sur le service impression\",\"col\":3}},{\"id\":\"mZ3QOJNOLy\",\"type\":\"chart\",\"data\":{\"chart_name\":\"impression \",\"col\":12}}]",
+ "creation": "2025-08-31 22:40:22.553137",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "table_2",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "FUTURE TECHNOLOGY",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "IMPRESSION",
+   "link_count": 0,
+   "link_to": "Commande Impression",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "REPORT",
+   "link_count": 0,
+   "link_to": "impression",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Commande Impression",
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-09-04 00:58:15.537170",
+ "modified_by": "Administrator",
+ "module": "Futuretech Services",
+ "name": "FUTURE TECHNOLOGY",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  }
+ ],
+ "sequence_id": 39.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "Report Builder",
+   "label": "IMPRESSION",
+   "link_to": "Commande Impression",
+   "stats_filter": "[[\"Commande Impression\",\"name\",\"=\",null,false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Rapport sur le service impression",
+   "link_to": "impression",
+   "report_ref_doctype": "Commande Impression",
+   "type": "Report"
+  }
+ ],
+ "title": "FUTURE TECHNOLOGY"
+}
