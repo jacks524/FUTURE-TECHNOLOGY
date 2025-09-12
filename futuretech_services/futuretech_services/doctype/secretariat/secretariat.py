@@ -1,49 +1,49 @@
+# Copyright (c) 2025, none and contributors
+# For license information, please see license.txt
+
 import frappe
 from frappe.model.document import Document
 from frappe.utils import nowdate
 
 
-class CommandeImpression(Document):
+class Secretariat(Document):
     def before_save(self):
-        """Calcul automatique du total avant sauvegarde"""
+        # Calcul automatique du total
         self.total = (self.prix_unitaire or 0) * (self.quantite or 0)
 
     def on_submit(self):
-        """Créer automatiquement une Sales Invoice lors de la soumission"""
+        # Créer automatiquement une Sales Invoice
         self.create_sales_invoice()
 
     def create_sales_invoice(self):
-        """Génération de la facture liée à la commande"""
-
         # Vérifier si une facture existe déjà pour cette commande
         existing_invoice = frappe.get_all(
             "Sales Invoice",
-            filters={"commande_impression": self.name}  # nécessite un champ custom
+            filters={"secretariat": self.name}
         )
         if existing_invoice:
-            return  # Ne pas créer de doublon
+            return  # Ne pas créer une double facture
 
-        # Données de la facture
         invoice_data = {
             "doctype": "Sales Invoice",
-            "customer": self.client,   # ⚠️ assure-toi que `client` est bien un champ Link → Customer
+            "customer": self.client,  # Champ client de CommandePhotographie
             "posting_date": nowdate(),
             "due_date": nowdate(),
             "items": [
                 {
-                    "item_name": self.type_d_impression,  # ou item_code si tu utilises les Items ERPNext
+                    "item_name": self.type_commande,  # ou item_code si tu as un Item
                     "qty": self.quantite,
                     "rate": self.prix_unitaire,
                     "amount": self.total,
                 }
             ],
-            # ⚠️ Champ personnalisé à créer dans Sales Invoice (Link vers Commande Impression)
-            "commande_impression": self.name
+            # ⚠️ Ce champ doit exister dans Sales Invoice (via Custom Field)
+            "secretariat": self.name  
         }
 
-        # Création et soumission de la facture
         invoice = frappe.get_doc(invoice_data)
         invoice.insert(ignore_permissions=True)
         invoice.submit()
 
-        frappe.msgprint(f"✅ Sales Invoice <b>{invoice.name}</b> créée pour la commande <b>{self.name}</b>")
+        frappe.msgprint(f"Sales Invoice {invoice.name} créée pour la commande {self.name}")
+

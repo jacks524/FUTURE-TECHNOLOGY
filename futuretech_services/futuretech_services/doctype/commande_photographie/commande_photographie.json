@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 04:05:20.714245",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "date",
+  "type_photo",
+  "quantite",
+  "prix_unitaire",
+  "total",
+  "commentaires"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "type_photo",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Taille de la Photographie",
+   "options": "24x30\n30x45\n40x60",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantite",
+   "fieldtype": "Int",
+   "label": "Quantite"
+  },
+  {
+   "fieldname": "prix_unitaire",
+   "fieldtype": "Currency",
+   "label": "Prix unitaire"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "options": "eval :doc.prix_unitaire * doc.quantite"
+  },
+  {
+   "fieldname": "commentaires",
+   "fieldtype": "Small Text",
+   "label": "Commentaires"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 04:45:40.959013",
+ "modified_by": "Administrator",
+ "module": "Futuretech Services",
+ "name": "Commande Photographie",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

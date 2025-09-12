@@ -2,10 +2,18 @@
  "charts": [
   {
    "chart_name": "IMPRESSION-T",
-   "label": "impression "
+   "label": "compte rendu du service de impression"
+  },
+  {
+   "chart_name": "photographie",
+   "label": "compte rendu du service de photographie"
+  },
+  {
+   "chart_name": "service secretariat",
+   "label": "compte rendu du service secretariat"
   }
  ],
- "content": "[{\"id\":\"sYt_Zgd2Xi\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FUTURE TECHNOLOGY</span>\",\"col\":12}},{\"id\":\"W1pJ85ZyWm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"IMPRESSION\",\"col\":3}},{\"id\":\"zz5SDVUFp0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rapport sur le service impression\",\"col\":3}},{\"id\":\"mZ3QOJNOLy\",\"type\":\"chart\",\"data\":{\"chart_name\":\"impression \",\"col\":12}}]",
+ "content": "[{\"id\":\"sYt_Zgd2Xi\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FUTURE TECHNOLOGY</span>\",\"col\":12}},{\"id\":\"h5-gF2OKQv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"impression\",\"col\":3}},{\"id\":\"zz5SDVUFp0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rapport sur le service impression\",\"col\":3}},{\"id\":\"YKfSVzdl68\",\"type\":\"chart\",\"data\":{\"chart_name\":\"compte rendu du service de impression\",\"col\":12}},{\"id\":\"METJVrGgGo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Photographie\",\"col\":3}},{\"id\":\"YgaiTmctIG\",\"type\":\"chart\",\"data\":{\"chart_name\":\"compte rendu du service de photographie\",\"col\":12}},{\"id\":\"69jBG4KtSf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service secretariat\",\"col\":3}},{\"id\":\"1K9HNuh7Vx\",\"type\":\"chart\",\"data\":{\"chart_name\":\"compte rendu du service secretariat\",\"col\":12}}]",
  "creation": "2025-08-31 22:40:22.553137",
  "custom_blocks": [],
  "docstatus": 0,
@@ -40,7 +48,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-09-04 00:58:15.537170",
+ "modified": "2025-09-11 12:05:06.517136",
  "modified_by": "Administrator",
  "module": "Futuretech Services",
  "name": "FUTURE TECHNOLOGY",
@@ -57,11 +65,27 @@
  "sequence_id": 39.0,
  "shortcuts": [
   {
-   "color": "Blue",
-   "doc_view": "Report Builder",
-   "label": "IMPRESSION",
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Service secretariat",
+   "link_to": "Secretariat",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "impression",
    "link_to": "Commande Impression",
-   "stats_filter": "[[\"Commande Impression\",\"name\",\"=\",null,false]]",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Photographie",
+   "link_to": "Commande Photographie",
+   "stats_filter": "[]",
    "type": "DocType"
   },
   {

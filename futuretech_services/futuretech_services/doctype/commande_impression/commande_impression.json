@@ -16,7 +16,7 @@
   "prix_unitaire",
   "total",
   "factures_li\u00e9e",
-  "commentraires",
+  "commentaires",
   "amended_from"
  ],
  "fields": [
@@ -85,11 +85,6 @@
    "options": "Sales Invoice"
   },
   {
-   "fieldname": "commentraires",
-   "fieldtype": "Small Text",
-   "label": "Commentraires"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -98,13 +93,18 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "commentaires",
+   "fieldtype": "Small Text",
+   "label": "Commentaires"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-04 00:52:38.212287",
+ "modified": "2025-09-09 04:33:46.953913",
  "modified_by": "Administrator",
  "module": "Futuretech Services",
  "name": "Commande Impression",
