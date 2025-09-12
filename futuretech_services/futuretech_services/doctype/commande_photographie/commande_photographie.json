@@ -16,7 +16,7 @@
  "fields": [
   {
    "fieldname": "client",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Client",
    "options": "Customer",
@@ -60,7 +60,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-09 04:45:40.959013",
+ "modified": "2025-09-12 14:35:07.978424",
  "modified_by": "Administrator",
  "module": "Futuretech Services",
  "name": "Commande Photographie",

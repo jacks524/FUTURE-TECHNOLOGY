@@ -27,7 +27,7 @@
   },
   {
    "fieldname": "client",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Client",
    "options": "Customer",
@@ -104,7 +104,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-09 04:33:46.953913",
+ "modified": "2025-09-12 14:34:54.422739",
  "modified_by": "Administrator",
  "module": "Futuretech Services",
  "name": "Commande Impression",
