@@ -4,8 +4,7 @@ from frappe.utils import nowdate
 
 
 class CommandeImpression(Document):
-    def before_save(self):
-        """Calcul automatique du total avant sauvegarde"""
+    def validate(self):
         self.total = (self.prix_unitaire or 0) * (self.quantite or 0)
 
     def on_submit(self):

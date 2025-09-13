@@ -1,0 +1,29 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "IMPRESSION-T",
+   "width": "Half"
+  },
+  {
+   "chart": "service secretariat",
+   "width": "Half"
+  },
+  {
+   "chart": "photographie",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-09-03 09:33:47.487983",
+ "dashboard_name": "DASHBOARD",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-09-13 20:46:26.819046",
+ "modified_by": "Administrator",
+ "module": "Futuretech Services",
+ "name": "DASHBOARD",
+ "owner": "Administrator"
+}

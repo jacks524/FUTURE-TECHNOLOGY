@@ -1,0 +1,29 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "IMPRESSION-T",
+   "width": "Half"
+  },
+  {
+   "chart": "service secretariat",
+   "width": "Half"
+  },
+  {
+   "chart": "photographie",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-09-13 18:47:24.523157",
+ "dashboard_name": "Vue d'ensemble Services",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-09-13 18:47:24.523157",
+ "modified_by": "Administrator",
+ "module": "Futuretech Services",
+ "name": "Vue d'ensemble Services",
+ "owner": "Administrator"
+}
