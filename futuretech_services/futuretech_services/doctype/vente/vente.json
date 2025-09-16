@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-16 15:41:14.983985",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vente",
+  "client",
+  "date",
+  "articles",
+  "quantite",
+  "prix_unitaire",
+  "total",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "vente",
+   "fieldtype": "Section Break",
+   "label": "Vente"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Data",
+   "label": "Client"
+  },
+  {
+   "fieldname": "articles",
+   "fieldtype": "Select",
+   "label": "Articles",
+   "options": "stylo\ncahier"
+  },
+  {
+   "fieldname": "quantite",
+   "fieldtype": "Float",
+   "label": "Quantite"
+  },
+  {
+   "fieldname": "prix_unitaire",
+   "fieldtype": "Currency",
+   "label": "Prix unitaire"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-16 16:05:04.767882",
+ "modified_by": "Administrator",
+ "module": "Futuretech Services",
+ "name": "Vente",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

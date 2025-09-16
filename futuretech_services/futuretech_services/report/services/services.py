@@ -19,7 +19,7 @@ def execute(filters=None):
             conditions += " AND date <= %(to_date)s"
             values["to_date"] = filters["to_date"]
 
-    # Requête SQL pour combiner les données
+    # Requête SQL pour combiner les données de tous les services
     query = f"""
         SELECT 'Impression' as service, SUM(total) as value, date as date_field
         FROM `tabCommande Impression`
@@ -35,6 +35,12 @@ def execute(filters=None):
         FROM `tabSecretariat`
         WHERE 1=1 {conditions}
         GROUP BY date
+        UNION ALL
+        SELECT 'Vente' as service, SUM(total) as value, date as date_field
+        FROM `tabVente`
+        WHERE 1=1 {conditions}
+        GROUP BY date
+        ORDER BY date_field DESC, service ASC
     """
 
     try:
@@ -68,10 +74,13 @@ def execute(filters=None):
                 "fieldname": "value",
                 "label": "Revenu",
                 "fieldtype": "Currency",
-                "width": 120,
+                "width": 150,
                 "options": "XAF"
             }
         ]
+
+        # Log pour debug (optionnel)
+        # frappe.log_error(f"Rapport généré avec {len(data)} lignes")
 
         return columns, data
 
@@ -81,3 +90,40 @@ def execute(filters=None):
         return [
             {"fieldname": "error", "label": "Erreur", "fieldtype": "Data", "width": 200}
         ], [{"error": f"Erreur: {str(e)}"}]
+
+
+# Fonction auxiliaire pour obtenir un résumé des ventes
+def get_vente_summary(filters=None):
+    """
+    Fonction pour obtenir un résumé détaillé des ventes
+    """
+    conditions = ""
+    values = {}
+    
+    if filters:
+        if filters.get("from_date"):
+            conditions += " AND date >= %(from_date)s"
+            values["from_date"] = filters["from_date"]
+        if filters.get("to_date"):
+            conditions += " AND date <= %(to_date)s"
+            values["to_date"] = filters["to_date"]
+    
+    query = f"""
+        SELECT 
+            articles,
+            SUM(quantite) as total_quantite,
+            SUM(total) as total_ventes,
+            COUNT(*) as nombre_transactions,
+            AVG(prix_unitaire) as prix_moyen
+        FROM `tabVente`
+        WHERE 1=1 {conditions}
+        GROUP BY articles
+        ORDER BY total_ventes DESC
+    """
+    
+    try:
+        result = frappe.db.sql(query, values, as_dict=True)
+        return result
+    except Exception as e:
+        frappe.log_error(f"Erreur dans get_vente_summary: {str(e)}")
+        return []

@@ -5,7 +5,7 @@
    "label": "SERVICES"
   }
  ],
- "content": "[{\"id\":\"sYt_Zgd2Xi\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FUTURE TECHNOLOGY</span>\",\"col\":12}},{\"id\":\"zz5SDVUFp0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rapport sur le service impression\",\"col\":3}},{\"id\":\"DQmu4zPQxj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"impression\",\"col\":3}},{\"id\":\"METJVrGgGo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Photographie\",\"col\":3}},{\"id\":\"69jBG4KtSf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service secretariat\",\"col\":3}},{\"id\":\"UQyKPzP792\",\"type\":\"chart\",\"data\":{\"chart_name\":\"SERVICES\",\"col\":12}},{\"id\":\"IXtdmikjAJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"dashboard\",\"col\":3}}]",
+ "content": "[{\"id\":\"sYt_Zgd2Xi\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FUTURE TECHNOLOGY</span>\",\"col\":12}},{\"id\":\"zz5SDVUFp0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rapport sur le service impression\",\"col\":3}},{\"id\":\"DQmu4zPQxj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"impression\",\"col\":3}},{\"id\":\"METJVrGgGo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Photographie\",\"col\":3}},{\"id\":\"69jBG4KtSf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service secretariat\",\"col\":3}},{\"id\":\"fbprfW-T3I\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"vente\",\"col\":3}},{\"id\":\"UQyKPzP792\",\"type\":\"chart\",\"data\":{\"chart_name\":\"SERVICES\",\"col\":12}},{\"id\":\"IXtdmikjAJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"dashboard\",\"col\":3}}]",
  "creation": "2025-08-31 22:40:22.553137",
  "custom_blocks": [],
  "docstatus": 0,
@@ -40,7 +40,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-09-13 20:47:30.279984",
+ "modified": "2025-09-16 16:25:52.961310",
  "modified_by": "Administrator",
  "module": "Futuretech Services",
  "name": "FUTURE TECHNOLOGY",
@@ -56,6 +56,14 @@
  ],
  "sequence_id": 39.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "vente",
+   "link_to": "Vente",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
